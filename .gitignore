@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Dreamweaver sync metadata
+_notes/
+dwsync.xml
+
+# Design source files (large binaries, keep exported assets in images/)
+material/*.ai
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Environment / secrets
+.env
+.env.*

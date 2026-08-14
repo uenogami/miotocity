@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="問い合わせ。部署別連絡先、問い合わせフォームなどのお問い合わせ情報をご案内します。">
+    <title>問い合わせ | 澪都市公式ウェブサイト</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/miotocity_emblem.svg"></head>
+<body>
+    <!-- ヘッダープレースホルダー -->
+    <div id="header-placeholder"></div>
+
+    <main id="main-content" class="main-content" role="main">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <a href="../index.html">トップページ</a>
+            <span>&gt;</span>
+            <span>問い合わせ</span>
+        </nav>
+
+        <h1 class="page-title">問い合わせ</h1>
+
+        <section class="content-block">
+            <h2>澪都市役所</h2>
+            <address>
+                〒000-0000<br>
+                澪都県澪都市中央1-1-1<br>
+                代表電話：000-0000-0000<br>
+                FAX：000-0000-0001<br>
+                開庁時間：平日 8:30～17:15<br>
+                休庁日：土日祝日、年末年始（12月29日～1月3日）
+            </address>
+        </section>
+
+        <section class="content-block">
+            <h2>部署別連絡先</h2>
+            
+            <h3>総務課</h3>
+            <p>電話：000-0000-0010<br>
+            FAX：000-0000-0011<br>
+            主な業務：総務、人事、広報、情報管理</p>
+
+            <h3>市民課</h3>
+            <p>電話：000-0000-0020<br>
+            FAX：000-0000-0021<br>
+            主な業務：住民票、戸籍、印鑑登録、選挙</p>
+
+            <h3>子育て支援課</h3>
+            <p>電話：000-0000-0030<br>
+            FAX：000-0000-0031<br>
+            主な業務：保育園、子育て支援、児童手当</p>
+
+            <h3>健康福祉課</h3>
+            <p>電話：000-0000-0040<br>
+            FAX：000-0000-0041<br>
+            主な業務：健康診断、介護保険、障害者福祉</p>
+
+            <h3>観光振興課</h3>
+            <p>電話：000-0000-0050<br>
+            FAX：000-0000-0051<br>
+            主な業務：観光振興、イベント、文化施設</p>
+
+            <h3>都市整備課</h3>
+            <p>電話：000-0000-0060<br>
+            FAX：000-0000-0061<br>
+            主な業務：都市計画、道路、公園、建築</p>
+
+            <h3>財政課</h3>
+            <p>電話：000-0000-0070<br>
+            FAX：000-0000-0071<br>
+            主な業務：予算、決算、税務</p>
+        </section>
+
+        <section class="content-block">
+            <h2>問い合わせフォーム</h2>
+            <p>以下のフォームからお問い合わせいただけます。</p>
+            <!-- エラーメッセージ用のaria-liveリージョン -->
+            <div id="form-errors" class="form-errors" role="alert" aria-live="polite" aria-atomic="true"></div>
+            <form action="#" method="post" aria-label="問い合わせフォーム" id="contact-form" novalidate>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="name">お名前 <span class="required" aria-label="必須項目">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true" aria-invalid="false" aria-describedby="name-error" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="email">メールアドレス <span class="required" aria-label="必須項目">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-invalid="false" aria-describedby="email-error" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="department">お問い合わせ先部署</label>
+                    <select id="department" name="department" aria-invalid="false" aria-describedby="department-error" style="width: 100%; padding: 8px; margin-top: 5px;">
+                        <option value="">選択してください</option>
+                        <option value="総務課">総務課</option>
+                        <option value="市民課">市民課</option>
+                        <option value="子育て支援課">子育て支援課</option>
+                        <option value="健康福祉課">健康福祉課</option>
+                        <option value="観光振興課">観光振興課</option>
+                        <option value="都市整備課">都市整備課</option>
+                        <option value="財政課">財政課</option>
+                        <option value="その他">その他</option>
+                    </select>
+                    <span id="department-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="subject">件名 <span class="required" aria-label="必須項目">*</span></label>
+                    <input type="text" id="subject" name="subject" required aria-required="true" aria-invalid="false" aria-describedby="subject-error" style="width: 100%; padding: 8px; margin-top: 5px;">
+                    <span id="subject-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="message">お問い合わせ内容 <span class="required" aria-label="必須項目">*</span></label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true" aria-invalid="false" aria-describedby="message-error" style="width: 100%; padding: 8px; margin-top: 5px;"></textarea>
+                    <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <button type="submit" style="padding: 10px 30px; background-color: var(--primary-color); color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">送信</button>
+                </div>
+            </form>
+            <p style="font-size: 0.875rem; color: #666;">※ お問い合わせへの回答には、数日かかる場合があります。</p>
+        </section>
+
+        <section class="content-block">
+            <h2>よくある質問</h2>
+            <p>よくある質問については、<a href="../faq/index.html">よくある質問ページ</a>をご覧ください。</p>
+        </section>
+    </main>
+
+    <!-- フッタープレースホルダー -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/load-common.js"></script>
+    <script src="../js/accordion-menu.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/form-validation.js"></script>
+</body>
+</html>
+

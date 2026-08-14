@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="澪都市公式ウェブサイト。くらし・手続き、子育て・教育、健康・福祉、観光・文化・スポーツなどの情報を提供しています。">
+    <title>澪都市公式ウェブサイト | トップページ</title>
+    <link rel="icon" type="image/svg+xml" href="images/miotocity_emblem.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/miotocity_emblem.svg"></head>
+<body>
+    <!-- ページタイトル変更通知用（非表示） -->
+    <div id="page-title-announcement" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+    <!-- ヘッダープレースホルダー -->
+    <div id="header-placeholder"></div>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- ヒーロー領域とお知らせの横並びコンテナ -->
+        <div class="hero-announcements-container">
+            <!-- ヒーロー領域（スライドショー） -->
+            <section class="hero-slider" aria-label="メインビジュアル">
+                <!-- スライド変更通知用（非表示） -->
+                <div class="visually-hidden" id="slider-announcement" aria-live="polite" aria-atomic="true"></div>
+                <div class="slider-container">
+                    <!-- スライド1: ようこそ澪都市へ -->
+                    <div class="hero-slide active" data-slide="0" style="background-image: url('images/hero1.jpg');">
+                        <div class="slide-content">
+                            <h2>ようこそ澪都市へ</h2>
+                            <p>豊かな自然と歴史に彩られた、住みやすいまち</p>
+                            <a href="about/index.html" class="slide-button">澪都市について</a>
+                        </div>
+                    </div>
+                    <!-- スライド2: 暮らし -->
+                    <div class="hero-slide" data-slide="1" style="background-image: url('images/hero2.jpg');">
+                        <div class="slide-content">
+                            <h2>くらし・手続き</h2>
+                            <p>住民票、税金、ごみ収集など、日常生活に必要な手続き情報</p>
+                            <a href="life/index.html" class="slide-button">くらし・手続きを見る</a>
+                        </div>
+                    </div>
+                    <!-- スライド3: 観光 -->
+                    <div class="hero-slide" data-slide="2" style="background-image: url('images/hero3.jpg');">
+                        <div class="slide-content">
+                            <h2>観光・文化・スポーツ</h2>
+                            <p>澪都市の見どころ、イベント、文化施設をご案内</p>
+                            <a href="tourism/index.html" class="slide-button">観光情報を見る</a>
+                        </div>
+                    </div>
+                    <!-- スライド4: 移住 -->
+                    <div class="hero-slide" data-slide="3" style="background-image: url('images/hero4.jpg');">
+                        <div class="slide-content">
+                            <h2>移住・定住情報</h2>
+                            <p>澪都市への移住を検討されている方へ、各種支援制度や生活情報をご案内</p>
+                            <a href="about/index.html" class="slide-button">移住情報を見る</a>
+                        </div>
+                    </div>
+                    <!-- スライド5: 市民通信 -->
+                    <div class="hero-slide" data-slide="4" style="background-image: url('images/hero5.jpg');">
+                        <div class="slide-content">
+                            <h2>澪都市民通信</h2>
+                            <p>市の最新情報をお届けする広報誌</p>
+                            <a href="press/index.html" class="slide-button">最新号を見る</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- スライドナビゲーション -->
+                <div class="slider-nav-wrapper">
+                    <div class="slider-nav" role="tablist" aria-label="スライドナビゲーション">
+                        <button class="slider-dot active" aria-label="スライド1" data-slide="0" role="tab" aria-selected="true"></button>
+                        <button class="slider-dot" aria-label="スライド2" data-slide="1" role="tab" aria-selected="false"></button>
+                        <button class="slider-dot" aria-label="スライド3" data-slide="2" role="tab" aria-selected="false"></button>
+                        <button class="slider-dot" aria-label="スライド4" data-slide="3" role="tab" aria-selected="false"></button>
+                        <button class="slider-dot" aria-label="スライド5" data-slide="4" role="tab" aria-selected="false"></button>
+                    </div>
+                    <!-- プログレスバー -->
+                    <div class="slider-progress-container">
+                        <div class="slider-progress-bar"></div>
+                    </div>
+                </div>
+                <!-- 前へ/次へボタン -->
+                <button class="slider-prev" aria-label="前のスライド" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="slider-next" aria-label="次のスライド" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- お知らせ・緊急情報 -->
+            <section class="announcements-sidebar" aria-label="お知らせと緊急情報">
+                <h2>お知らせ・緊急情報</h2>
+                <!-- 防災情報アイテム -->
+                <div class="info-box" aria-live="polite" aria-atomic="true">
+                    <h3>防災情報</h3>
+                    <p class="info-message">緊急のお知らせはありません</p>
+                    <a href="disaster/index.html" class="info-link">防災情報を見る</a>
+                </div>
+                <!-- 交通情報アイテム -->
+                <div class="info-box" aria-live="polite" aria-atomic="true">
+                    <h3>交通情報</h3>
+                    <p class="info-message">現在、交通規制情報はありません</p>
+                    <a href="access/index.html" class="info-link">交通情報を見る</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- コンテンツグリッド -->
+        <div class="content-grid">
+        </div>
+
+        <!-- 主要バナー -->
+        <section class="main-banners" aria-label="よく使う手続き">
+            <a href="life/index.html#garbage" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/>
+                    <line x1="10" y1="11" x2="10" y2="17"/>
+                    <line x1="14" y1="11" x2="14" y2="17"/>
+                </svg>
+                <h3>ごみ収集</h3>
+            </a>
+            <a href="life/index.html#residence" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                </svg>
+                <h3>各種証明書</h3>
+
+            </a>
+            <a href="life/index.html#tax" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="12" x2="12" y2="22"/>
+                    <line x1="4" y1="2" x2="12" y2="12"/>
+                    <line x1="20" y1="2" x2="12" y2="12"/>
+                    <line x1="18" y1="12" x2="6" y2="12"/>
+                    <line x1="18" y1="16" x2="6" y2="16"/>
+                </svg>
+                <h3>納税・手続き</h3>
+            </a>
+            <a href="education/index.html" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <h3>子育て</h3>
+            </a>
+            <a href="health/index.html" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                    <line x1="12" y1="2" x2="12" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                </svg>
+                <h3>医療・健康</h3>
+            </a>
+            <a href="voice/index.html" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <h3>市民の声</h3>
+            </a>
+            <a href="funeral/index.html" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="2" width="18" height="19" rx="1"/>
+                    <path d="M3 9 Q9 8 9 3"/>
+                    <path d="M21 9 Q15 8 15 3"/>
+                </svg>
+                <h3>おくやみ</h3>
+            </a>
+            <a href="government/urban.html" class="banner-item">
+                <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 21h18"/>
+                    <path d="M5 21V7l8-4v18"/>
+                    <path d="M19 21V11l-6-4"/>
+                    <line x1="9" y1="9" x2="9" y2="9"/>
+                    <line x1="9" y1="12" x2="9" y2="12"/>
+                    <line x1="9" y1="15" x2="9" y2="15"/>
+                    <line x1="9" y1="18" x2="9" y2="18"/>
+                </svg>
+                <h3>まちづくり</h3>
+            </a>
+        </section>
+
+        <!-- 澪都市からのお知らせ -->
+        <section class="content-block announcements-section" aria-label="澪都市からのお知らせ">
+            <h2>澪都市からのお知らせ</h2>
+            <div class="announcements-list">
+                <article class="announcement-item">
+                    <time class="announcement-date" datetime="2024-01-15">2024年1月15日</time>
+                    <h3 class="announcement-title">
+                        <a href="news/index.html#news1">新年度の各種手続きについて</a>
+                    </h3>
+                    <p class="announcement-excerpt">新年度を迎えるにあたり、各種手続きのご案内をお知らせします。</p>
+                </article>
+                <article class="announcement-item">
+                    <time class="announcement-date" datetime="2024-01-10">2024年1月10日</time>
+                    <h3 class="announcement-title">
+                        <a href="news/index.html#news2">冬季イベント開催のお知らせ</a>
+                    </h3>
+                    <p class="announcement-excerpt">澪都市では、冬の魅力を感じていただけるイベントを開催いたします。</p>
+                </article>
+                <article class="announcement-item">
+                    <time class="announcement-date" datetime="2024-01-05">2024年1月5日</time>
+                    <h3 class="announcement-title">
+                        <a href="news/index.html#news3">市役所の開庁時間変更について</a>
+                    </h3>
+                    <p class="announcement-excerpt">年末年始期間中の市役所の開庁時間についてお知らせします。</p>
+                </article>
+            </div>
+            <p class="announcements-more" style="margin-top: 20px; text-align: right;">
+                <a href="news/index.html">すべてのお知らせを見る →</a>
+            </p>
+        </section>
+
+        <!-- イベントカレンダー -->
+        <section class="content-block event-calendar" aria-label="イベントカレンダー">
+            <h2>イベントカレンダー</h2>
+            <div class="calendar-grid">
+                <!-- カレンダーの日付はJavaScriptで動的に生成するか、サーバーサイドで生成 -->
+                <div class="calendar-day">1</div>
+                <div class="calendar-day">2</div>
+                <div class="calendar-day">3</div>
+                <div class="calendar-day">4</div>
+                <div class="calendar-day">5</div>
+                <div class="calendar-day">6</div>
+                <div class="calendar-day">7</div>
+                <!-- 続きの日付... -->
+            </div>
+            <p style="margin-top: 15px;"><a href="tourism/index.html#events">すべてのイベントを見る</a></p>
+        </section>
+
+        <!-- 澪都市について -->
+        <section class="content-block" aria-label="澪都市について">
+            <h2>澪都市について</h2>
+            <div class="card-grid card-grid--about">
+                <a href="about/index.html#overview" class="info-card">
+                    <h3>概要・人口</h3>
+                </a>
+                <a href="about/index.html#history" class="info-card">
+                    <h3>歴史・文化</h3>
+                </a>
+                <a href="tourism/index.html#spots" class="info-card">
+                    <h3>おすすめスポット</h3>
+                </a>
+                <a href="tourism/index.html#seasons" class="info-card">
+                    <h3>季節の見どころ</h3>
+                </a>
+                <a href="press/index.html" class="info-card">
+                    <h3>澪都市民通信</h3>
+                </a>
+                <a href="access/index.html" class="info-card">
+                    <h3>アクセス</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- 市政情報 -->
+        <section class="content-block" aria-label="市政情報">
+            <h2>市政情報</h2>
+            <div class="card-grid">
+                <a href="about/index.html#mayor" class="info-card">
+                    <h3>市長メッセージ</h3>
+                </a>
+                <a href="government/index.html#council" class="info-card">
+                    <h3>市議会</h3>
+                </a>
+                <a href="government/index.html#recruitment" class="info-card">
+                    <h3>採用情報</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- 広告掲載 -->
+        <section class="content-block advertisement-section" aria-label="広告掲載">
+            <h2>広告掲載</h2>
+            <!-- 広告スペース -->
+            <div class="advertisement-spaces">
+                <div class="advertisement-space">
+                    <a href="../walkphonesite/index.html" class="advertisement-link" target="_blank" rel="noopener noreferrer">
+                        <div class="advertisement-placeholder">
+                            <img src="images/walkphone.jpg" alt="WorkPhone" class="advertisement-image">
+                        </div>
+                    </a>
+                </div>
+                <div class="advertisement-space">
+                    <div class="advertisement-placeholder">
+                        <span class="advertisement-label">広告スペース2</span>
+                    </div>
+                </div>
+                <div class="advertisement-space">
+                    <div class="advertisement-placeholder">
+                        <span class="advertisement-label">広告スペース3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="advertisement-content">
+                <p>澪都市公式ウェブサイトでは、市民の皆様に役立つ情報をお届けするため、広告掲載を承っております。</p>
+                <div class="advertisement-info">
+                    <h3>掲載について</h3>
+                    <ul>
+                        <li>広告掲載をご希望の方は、下記お問い合わせ先までご連絡ください。</li>
+                        <li>掲載内容については、澪都市の基準に基づき審査させていただきます。</li>
+                        <li>掲載料金や詳細については、お問い合わせ時にご案内いたします。</li>
+                    </ul>
+                </div>
+                <div class="advertisement-contact">
+                    <h3>お問い合わせ</h3>
+                    <p>
+                        澪都市役所 広報課<br>
+                        電話：000-0000-0000<br>
+                        メール：<a href="mailto:advertisement@mioto-city.example.jp">advertisement@mioto-city.example.jp</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッタープレースホルダー -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/load-common.js"></script>
+    <script src="js/accordion-menu.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/page-title.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

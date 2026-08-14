@@ -1,0 +1,322 @@
+<!-- スキップリンク -->
+<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+<!-- ヘッダー -->
+<header class="header" role="banner">
+    <!-- ヘッダートップ（ロゴとユニバーサルスイッチ） -->
+    <div class="header-top">
+        <h1 class="logo">
+            <a href="index.html" aria-label="澪都市公式ウェブサイト トップページ" class="logo__link" id="logo-link">
+                <img src="images/miotocity_emblem.svg" alt="澪都市章" class="logo__emblem" aria-hidden="true">
+                <span class="logo__text">
+                    <span class="logo__main">澪都市</span>
+                    <span class="logo__sub">Mioto City</span>
+                </span>
+            </a>
+        </h1>
+        <!-- ユニバーサルスイッチ -->
+        <div class="universal-switch" role="toolbar" aria-label="アクセシビリティオプション">
+            <div class="language-switch">
+                <button id="lang-ja" type="button" aria-label="日本語に切り替え" class="lang-btn active" data-lang="ja">日本語</button>
+                <button id="lang-en" type="button" aria-label="Switch to English" class="lang-btn" data-lang="en">English</button>
+            </div>
+            <button id="read-aloud" type="button" aria-label="音声読み上げ">音声読み上げ</button>
+            <div class="font-size-switch" aria-label="文字サイズの変更">
+                <span class="font-size-label">文字サイズ</span>
+                <button id="font-normal" type="button" aria-label="文字を標準サイズに">標準</button>
+                <button id="font-extra-large" type="button" aria-label="文字を特大に">拡大</button>
+            </div>
+            <button id="toggle-contrast" type="button" aria-label="色のコントラストを変更">コントラスト</button>
+        </div>
+    </div>
+    
+    <!-- モバイル用ヘッダー（1行レイアウト） -->
+    <div class="header-mobile">
+        <h1 class="logo logo--mobile">
+            <a href="index.html" aria-label="澪都市公式ウェブサイト トップページ" class="logo__link">
+                <img src="images/miotocity_emblem.svg" alt="澪都市章" class="logo__emblem" aria-hidden="true">
+                <span class="logo__text">
+                    <span class="logo__main">澪都市</span>
+                    <span class="logo__sub">Mioto City</span>
+                </span>
+            </a>
+        </h1>
+        <div class="header-mobile__buttons">
+            <!-- 防災・緊急情報リンク -->
+            <a href="disaster/index.html" class="header__disaster-link" aria-label="防災・緊急情報">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span class="header__button-label">緊急</span>
+            </a>
+            <!-- 検索ボタン（モバイル） -->
+            <button class="header__search-toggle" type="button" aria-label="検索を開く" aria-expanded="false" id="mobile-search-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <span class="header__button-label">検索</span>
+            </button>
+            <!-- ハンバーガーボタン -->
+            <button class="header__menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" id="hamburger-toggle">
+                <span class="header__menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="header__button-label">メニュー</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- モバイル検索バー（初期状態は非表示） -->
+    <div class="header__search-box" id="mobile-search-box" aria-hidden="true">
+        <form role="search" aria-label="サイト内検索">
+            <label for="mobile-search-input" class="visually-hidden">検索キーワード</label>
+            <input type="search" id="mobile-search-input" placeholder="サイト内を検索" aria-label="検索キーワードを入力" aria-describedby="mobile-search-results-announcement">
+            <button type="submit" aria-label="検索を実行">検索</button>
+            <button type="button" class="header__search-close" aria-label="検索を閉じる">閉じる</button>
+        </form>
+        <!-- 検索結果の通知用（非表示） -->
+        <div id="mobile-search-results-announcement" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    
+    <!-- ハンバーガーメニュー（初期状態は非表示） -->
+    <div class="header__menu" id="hamburger-menu" aria-hidden="true">
+        <!-- ユニバーサルスイッチ（モバイル） -->
+        <div class="header__universal-switch header__universal-switch--mobile" role="toolbar" aria-label="アクセシビリティオプション">
+            <div class="language-switch" aria-label="言語の変更">
+                <span class="switch-label">言語</span>
+                <div class="switch-buttons">
+                    <button id="mobile-lang-ja" type="button" aria-label="日本語に切り替え" class="lang-btn active" data-lang="ja">日本語</button>
+                    <button id="mobile-lang-en" type="button" aria-label="Switch to English" class="lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+            <div class="font-size-switch" aria-label="文字サイズの変更">
+                <span class="font-size-label">文字サイズ</span>
+                <div class="switch-buttons">
+                    <button id="mobile-font-normal" type="button" aria-label="文字を標準サイズに">標準</button>
+                    <button id="mobile-font-extra-large" type="button" aria-label="文字を特大に">拡大</button>
+                </div>
+            </div>
+            <div class="contrast-switch" aria-label="コントラストの変更">
+                <span class="switch-label">コントラスト</span>
+                <div class="switch-buttons">
+                    <button id="mobile-contrast-normal" type="button" aria-label="標準コントラスト">標準</button>
+                    <button id="mobile-toggle-contrast" type="button" aria-label="色のコントラストを適用">適用</button>
+                </div>
+            </div>
+            <button id="mobile-read-aloud" type="button" aria-label="音声読み上げ">音声読み上げ</button>
+        </div>
+        <!-- グローバルメニュー（モバイル） -->
+        <nav class="header__global-menu header__global-menu--mobile" role="navigation" aria-label="メインナビゲーション">
+            <ul>
+                <li class="has-submenu">
+                    <a href="life/index.html">くらし・手続き</a>
+                    <button class="submenu-toggle" type="button" aria-label="サブメニューを開く" aria-expanded="false">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="life/residence.html">住民票・戸籍・印鑑登録</a></li>
+                            <li><a href="funeral/index.html">おくやみ</a></li>
+                            <li><a href="life/marriage.html">結婚・離婚</a></li>
+                            <li><a href="life/birth.html">出産について</a></li>
+                            <li><a href="life/tax.html">税金</a></li>
+                            <li><a href="life/infrastructure.html">上下水道・生活インフラ</a></li>
+                            <li><a href="life/garbage.html">ごみ収集・リサイクル</a></li>
+                            <li><a href="life/medical.html">医療・福祉</a></li>
+                            <li><a href="life/elderly.html">高齢者支援</a></li>
+                            <li><a href="life/disability.html">障害福祉</a></li>
+                            <li><a href="life/pension.html">年金・保険</a></li>
+                            <li><a href="life/transport.html">市営交通</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-submenu">
+                    <a href="education/index.html">子育て・教育</a>
+                    <button class="submenu-toggle" type="button" aria-label="サブメニューを開く" aria-expanded="false">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="education/nursery.html">保育園・幼稚園</a></li>
+                            <li><a href="education/schools.html">小中学校区案内</a></li>
+                            <li><a href="education/highschool.html">高校・専門学校</a></li>
+                            <li><a href="education/library.html">図書館</a></li>
+                            <li><a href="education/lifelong.html">生涯学習・公民館</a></li>
+                            <li><a href="education/support.html">子育て支援</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-submenu">
+                    <a href="health/index.html">健康・福祉</a>
+                    <button class="submenu-toggle" type="button" aria-label="サブメニューを開く" aria-expanded="false">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="health/center.html">保健センター</a></li>
+                            <li><a href="health/vaccination.html">予防接種</a></li>
+                            <li><a href="health/maternity.html">妊産婦支援</a></li>
+                            <li><a href="health/medical.html">医療機関一覧</a></li>
+                            <li><a href="health/emergency.html">救急医療案内</a></li>
+                            <li><a href="health/column.html">健康コラム</a></li>
+                            <li><a href="health/welfare.html">福祉サービス</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-submenu">
+                    <a href="tourism/index.html">観光・文化・スポーツ</a>
+                    <button class="submenu-toggle" type="button" aria-label="サブメニューを開く" aria-expanded="false">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="tourism/spots.html">観光スポット一覧</a></li>
+                            <li><a href="tourism/seasons.html">季節の見どころ</a></li>
+                            <li><a href="tourism/courses.html">モデルコース</a></li>
+                            <li><a href="tourism/oldtown.html">旧市街・聖域マップ</a></li>
+                            <li><a href="tourism/yokai.html">妖怪ゆかりスポット</a></li>
+                            <li><a href="tourism/culture.html">文化施設</a></li>
+                            <li><a href="tourism/experience.html">体験プログラム</a></li>
+                            <li><a href="tourism/events.html">イベント</a></li>
+                            <li><a href="tourism/accommodation.html">宿泊施設</a></li>
+                            <li><a href="tourism/food.html">食・特産品</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="has-submenu">
+                    <a href="government/index.html">市政情報</a>
+                    <button class="submenu-toggle" type="button" aria-label="サブメニューを開く" aria-expanded="false">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="government/organization.html">組織図</a></li>
+                            <li><a href="government/departments.html">部署一覧</a></li>
+                            <li><a href="government/mayor.html">市長メッセージ</a></li>
+                            <li><a href="government/council.html">市議会</a></li>
+                            <li><a href="government/plans.html">行政計画・施策</a></li>
+                            <li><a href="government/budget.html">財政・予算情報</a></li>
+                            <li><a href="government/statistics.html">統計</a></li>
+                            <li><a href="government/urban.html">都市整備・まちづくり</a></li>
+                            <li><a href="government/opendata.html">オープンデータ</a></li>
+                            <li><a href="government/recruitment.html">採用情報</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- グローバルメニュー -->
+    <nav class="global-menu" role="navigation" aria-label="メインナビゲーション">
+        <ul>
+            <li class="has-submenu">
+                <a href="life/index.html">くらし・手続き</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="life/residence.html">住民票・戸籍・印鑑登録</a></li>
+                        <li><a href="funeral/index.html">おくやみ</a></li>
+                        <li><a href="life/marriage.html">結婚・離婚</a></li>
+                        <li><a href="life/birth.html">出産について</a></li>
+                        <li><a href="life/tax.html">税金</a></li>
+                        <li><a href="life/infrastructure.html">上下水道・生活インフラ</a></li>
+                        <li><a href="life/garbage.html">ごみ収集・リサイクル</a></li>
+                        <li><a href="life/medical.html">医療・福祉</a></li>
+                        <li><a href="life/elderly.html">高齢者支援</a></li>
+                        <li><a href="life/disability.html">障害福祉</a></li>
+                        <li><a href="life/pension.html">年金・保険</a></li>
+                        <li><a href="life/transport.html">市営交通</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="education/index.html">子育て・教育</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="education/nursery.html">保育園・幼稚園</a></li>
+                        <li><a href="education/schools.html">小中学校区案内</a></li>
+                        <li><a href="education/highschool.html">高校・専門学校</a></li>
+                        <li><a href="education/library.html">図書館</a></li>
+                        <li><a href="education/lifelong.html">生涯学習・公民館</a></li>
+                        <li><a href="education/support.html">子育て支援</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="health/index.html">健康・福祉</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="health/center.html">保健センター</a></li>
+                        <li><a href="health/vaccination.html">予防接種</a></li>
+                        <li><a href="health/maternity.html">妊産婦支援</a></li>
+                        <li><a href="health/medical.html">医療機関一覧</a></li>
+                        <li><a href="health/emergency.html">救急医療案内</a></li>
+                        <li><a href="health/column.html">健康コラム</a></li>
+                        <li><a href="health/welfare.html">福祉サービス</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="tourism/index.html">観光・文化・スポーツ</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="tourism/spots.html">観光スポット一覧</a></li>
+                        <li><a href="tourism/seasons.html">季節の見どころ</a></li>
+                        <li><a href="tourism/courses.html">モデルコース</a></li>
+                        <li><a href="tourism/oldtown.html">旧市街・聖域マップ</a></li>
+                        <li><a href="tourism/yokai.html">妖怪ゆかりスポット</a></li>
+                        <li><a href="tourism/culture.html">文化施設</a></li>
+                        <li><a href="tourism/experience.html">体験プログラム</a></li>
+                        <li><a href="tourism/events.html">イベント</a></li>
+                        <li><a href="tourism/accommodation.html">宿泊施設</a></li>
+                        <li><a href="tourism/food.html">食・特産品</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="government/index.html">市政情報</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="government/organization.html">組織図</a></li>
+                        <li><a href="government/departments.html">部署一覧</a></li>
+                        <li><a href="government/mayor.html">市長メッセージ</a></li>
+                        <li><a href="government/council.html">市議会</a></li>
+                        <li><a href="government/plans.html">行政計画・施策</a></li>
+                        <li><a href="government/budget.html">財政・予算情報</a></li>
+                        <li><a href="government/statistics.html">統計</a></li>
+                        <li><a href="government/urban.html">都市整備・まちづくり</a></li>
+                        <li><a href="government/opendata.html">オープンデータ</a></li>
+                        <li><a href="government/recruitment.html">採用情報</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="search-menu-item">
+                <div class="search-box">
+                    <form role="search" aria-label="サイト内検索">
+                        <label for="search-input" class="visually-hidden">検索キーワード</label>
+                        <input type="search" id="search-input" placeholder="サイト内を検索" aria-label="検索キーワードを入力" aria-describedby="search-results-announcement">
+                        <button type="submit" aria-label="検索を実行">検索</button>
+                    </form>
+                    <!-- 検索結果の通知用（非表示） -->
+                    <div id="search-results-announcement" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
