@@ -3,6 +3,14 @@
 (function() {
     'use strict';
 
+    // 共通部品更新時にこの値を上げる（ブラウザキャッシュ対策）
+    var COMMON_PARTS_VERSION = '2';
+
+    function withCacheBust(url) {
+        var separator = url.indexOf('?') === -1 ? '?' : '&';
+        return url + separator + 'v=' + COMMON_PARTS_VERSION;
+    }
+
     // 現在のページの階層レベルを取得（../の数を計算）
     function getBasePath() {
         // スクリプトタグから直接パスを取得（最も確実な方法）
@@ -78,7 +86,7 @@
     // ヘッダーを読み込む
     function loadHeader() {
         const basePath = getBasePath();
-        const headerPath = basePath + 'includes/header.html';
+        const headerPath = withCacheBust(basePath + 'includes/header.html');
         const headerPlaceholder = document.getElementById('header-placeholder');
         
         if (headerPlaceholder) {
@@ -184,7 +192,7 @@
     // フッターを読み込む
     function loadFooter() {
         const basePath = getBasePath();
-        const footerPath = basePath + 'includes/footer.html';
+        const footerPath = withCacheBust(basePath + 'includes/footer.html');
         const footerPlaceholder = document.getElementById('footer-placeholder');
         
         if (footerPlaceholder) {

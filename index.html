@@ -16,6 +16,7 @@
 
     <!-- メインコンテンツ -->
     <main id="main-content" class="main-content" role="main">
+        <h1 class="visually-hidden">澪都市公式ウェブサイト</h1>
         <!-- ヒーロー領域とお知らせの横並びコンテナ -->
         <div class="hero-announcements-container">
             <!-- ヒーロー領域（スライドショー） -->
@@ -111,6 +112,24 @@
 
         <!-- コンテンツグリッド -->
         <div class="content-grid">
+            <a href="life/index.html" class="info-card">
+                <h3>くらし・手続き</h3>
+            </a>
+            <a href="education/index.html" class="info-card">
+                <h3>子育て・教育</h3>
+            </a>
+            <a href="health/index.html" class="info-card">
+                <h3>健康・福祉</h3>
+            </a>
+            <a href="government/index.html" class="info-card">
+                <h3>市政情報</h3>
+            </a>
+            <a href="tourism/index.html" class="info-card">
+                <h3>観光・文化・スポーツ</h3>
+            </a>
+            <a href="disaster/index.html" class="info-card">
+                <h3>防災・安全</h3>
+            </a>
         </div>
 
         <!-- 主要バナー -->
@@ -221,21 +240,11 @@
             </p>
         </section>
 
-        <!-- イベントカレンダー -->
-        <section class="content-block event-calendar" aria-label="イベントカレンダー">
-            <h2>イベントカレンダー</h2>
-            <div class="calendar-grid">
-                <!-- カレンダーの日付はJavaScriptで動的に生成するか、サーバーサイドで生成 -->
-                <div class="calendar-day">1</div>
-                <div class="calendar-day">2</div>
-                <div class="calendar-day">3</div>
-                <div class="calendar-day">4</div>
-                <div class="calendar-day">5</div>
-                <div class="calendar-day">6</div>
-                <div class="calendar-day">7</div>
-                <!-- 続きの日付... -->
-            </div>
-            <p style="margin-top: 15px;"><a href="tourism/index.html#events">すべてのイベントを見る</a></p>
+        <!-- イベント -->
+        <section class="content-block event-calendar" aria-label="イベント">
+            <h2>イベント</h2>
+            <p>現在掲載中のイベントはありません。</p>
+            <p><a href="tourism/index.html#events">イベント一覧を見る</a></p>
         </section>
 
         <!-- 澪都市について -->
@@ -314,8 +323,7 @@
                     <h3>お問い合わせ</h3>
                     <p>
                         澪都市役所 広報課<br>
-                        電話：000-0000-0000<br>
-                        メール：<a href="mailto:advertisement@mioto-city.example.jp">advertisement@mioto-city.example.jp</a>
+                        <a href="contact/index.html">お問い合わせフォーム</a>よりご連絡ください。
                     </p>
                 </div>
             </div>
@@ -325,7 +333,7 @@
     <!-- フッタープレースホルダー -->
     <div id="footer-placeholder"></div>
 
-    <script src="js/load-common.js"></script>
+    <script src="js/load-common.js?v=2"></script>
     <script src="js/accordion-menu.js"></script>
     <script src="js/accessibility.js"></script>
     <script src="js/page-title.js"></script>

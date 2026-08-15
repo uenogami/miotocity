@@ -989,6 +989,27 @@ a:focus:not(:focus-visible) {
     text-decoration: underline;
 }
 
+/* 準備中表示（未公開コンテンツ） */
+.link-pending {
+    color: #555;
+    background-color: #f7f7f7;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    cursor: default;
+    display: inline-block;
+}
+
+.content-block li .link-pending {
+    margin: 2px 0;
+}
+
+.content-block p .link-pending {
+    margin-top: 4px;
+}
+
 /* カードグリッド */
 .card-grid {
     display: grid;
