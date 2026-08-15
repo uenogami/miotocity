@@ -18,9 +18,9 @@
         let scriptSrc = '';
         
         for (let i = 0; i < scripts.length; i++) {
-            const src = scripts[i].src || scripts[i].getAttribute('src');
+            const src = scripts[i].getAttribute('src') || scripts[i].src;
             if (src && src.includes('load-common.js')) {
-                scriptSrc = src;
+                scriptSrc = src.split('?')[0].split('#')[0];
                 break;
             }
         }
@@ -235,4 +235,3 @@
         init();
     }
 })();
-
