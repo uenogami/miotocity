@@ -1214,15 +1214,18 @@ a:focus:not(:focus-visible) {
 }
 
 .announcements-section .announcement-item {
+    position: relative;
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 15px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.announcements-section .announcement-item:hover {
+.announcements-section .announcement-item:hover,
+.announcements-section .announcement-item:focus-within {
     border-color: var(--primary-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
@@ -1247,12 +1250,23 @@ a:focus:not(:focus-visible) {
     transition: color 0.3s ease;
 }
 
+.announcements-section .announcement-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+}
+
 .announcements-section .announcement-title a:hover,
 .announcements-section .announcement-title a:focus {
     color: var(--secondary-color);
     text-decoration: underline;
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    outline: none;
+}
+
+.announcements-section .announcement-item:focus-within {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 .announcements-section .announcement-excerpt {
@@ -1275,6 +1289,169 @@ a:focus:not(:focus-visible) {
     text-decoration: underline;
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* お知らせ一覧・記事 */
+.news-index-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.news-index-list li {
+    display: grid;
+    grid-template-columns: 6.5rem 5.5rem 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-index-list li:last-child {
+    border-bottom: 0;
+}
+
+.news-index-list time,
+.news-meta time {
+    color: #555;
+    font-variant-numeric: tabular-nums;
+}
+
+.news-index-list a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.news-index-list a:hover,
+.news-index-list a:focus {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.news-category {
+    display: inline-block;
+    min-width: 4.5rem;
+    padding: 3px 8px;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.news-category--health {
+    color: #207044;
+    background-color: #eef8f2;
+}
+
+.news-category--disaster {
+    color: #a33a20;
+    background-color: #fff3ef;
+}
+
+.news-category--life {
+    color: #285f9c;
+    background-color: #eef5fc;
+}
+
+.news-category--safety {
+    color: #7a5711;
+    background-color: #fff8e5;
+}
+
+.news-category--childcare {
+    color: #8a3761;
+    background-color: #fff1f7;
+}
+
+.news-category--environment {
+    color: #326b2f;
+    background-color: #f1f8ed;
+}
+
+.news-year-heading {
+    margin: 36px 0 18px;
+    padding: 8px 12px;
+    border-left: 5px solid var(--primary-color);
+    background-color: #f4f8fc;
+    color: var(--secondary-color);
+}
+
+.news-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+article[id^="news"] {
+    scroll-margin-top: 24px;
+}
+
+/* 主要カテゴリページの案内カード */
+.page-guide {
+    margin-bottom: 28px;
+}
+
+.page-guide > p {
+    margin-bottom: 18px;
+}
+
+.page-link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.page-link-card {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.page-link-card strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.page-link-card span {
+    display: block;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.page-link-card:hover,
+.page-link-card:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 3px 10px rgba(0, 102, 204, 0.14);
+    transform: translateY(-2px);
+    outline: 3px solid transparent;
+}
+
+@media (max-width: 600px) {
+    .news-index-list li {
+        grid-template-columns: 5rem 1fr;
+        gap: 8px 10px;
+    }
+
+    .news-index-list a {
+        grid-column: 1 / -1;
+    }
+
+    .news-meta {
+        flex-wrap: wrap;
+    }
 }
 
 /* 主要バナー */
@@ -2458,4 +2635,3 @@ select[aria-invalid="true"]:focus {
         padding: 0;
     }
 }
-
